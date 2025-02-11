@@ -7,11 +7,13 @@ using System.Threading.Tasks;
 namespace Learning.DataStructure.Recurssion
 {
     /*
-     * Rotating Binary Search is a variant of the classic binary search algorithm, designed to work with a rotated sorted array. A rotated sorted array is one where the elements are initially sorted in ascending order, but then some prefix of the array is moved to the end.
+     * Rotating Binary Search is a variant of the classic binary search algorithm, designed to work with a rotated sorted array. 
+     A rotated sorted array is one where the elements are initially sorted in ascending order, but then some prefix of the array is moved to the end.
 
 For example, consider the array [4, 5, 6, 7, 0, 1, 2]. This is a rotated version of [0, 1, 2, 4, 5, 6, 7].
 
-The challenge with searching in such an array is that the middle element of the array does not give you the full picture of whether to move to the left or right half, as the array is not fully sorted in one direction.
+The challenge with searching in such an array is that the middle element of the array does not give you the full picture of whether 
+to move to the left or right half, as the array is not fully sorted in one direction.
 
 Algorithm
 Here is how Rotating Binary Search works:
@@ -25,8 +27,10 @@ If arr[low] <= arr[mid], the left half is sorted.
 Otherwise, the right half is sorted.
 Check if the target lies in the sorted half:
 
-If the left half is sorted (arr[low] <= arr[mid]), check if the target is between arr[low] and arr[mid]. If it is, reduce the search space to the left half (low to mid-1), otherwise, search in the right half.
-If the right half is sorted (arr[mid] <= arr[high]), check if the target is between arr[mid] and arr[high]. If it is, reduce the search space to the right half (mid+1 to high), otherwise, search in the left half.
+If the left half is sorted (arr[low] <= arr[mid]), check if the target is between arr[low] and arr[mid]. If it is, 
+    reduce the search space to the left half (low to mid-1), otherwise, search in the right half.
+If the right half is sorted (arr[mid] <= arr[high]), check if the target is between arr[mid] and arr[high]. 
+    If it is, reduce the search space to the right half (mid+1 to high), otherwise, search in the left half.
 Repeat the process until the target is found or the search space is exhausted.
 
 Example
